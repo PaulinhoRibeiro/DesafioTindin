@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Tindin</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div id="login-screen" class="login-screen">
+    <form id="login-form">
+      <label for="username">Nome:</label>
+      <input type="text" id="username" required>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="geral">
+    <iframe src="https://lab.tindin.com.br" frameborder="0" title="Mapa"></iframe>
+    <div class="avatar">
+      <img src="./IMG/Avatar/EDUARDO_AVATAR 2.png" alt="Avatar" class="avatar">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="elemento">
+      <div class="seta">
+        <img id="seta" src="./IMG/Setas/seta_baixo.png" onclick="toggleArrow()" alt="Seta para baixo">
+      </div>
+    </div>
+  </div>
+
+  <div class="navbarmenufechado" id="navbar-menufechado">
+    <ul>
+      <li><a href="#"><img class="aplica1" src="/IMG/Navbar_menufechado/aplica1.png" alt="aplica1" /></a></li>
+      <li><a href="#"><img src="/IMG/Navbar_menufechado/comunidade_icon02 3.png" alt="Social" /></a></li>
+      <li><a href="#"><img src="/IMG/Navbar_menufechado/notifica1.png" alt="notifica1" /></a></li>
+      <li><a href="#"><img src="/IMG/Navbar_menufechado/chat1.png" alt="chat1" /></a></li>
+      <li><a href="#"><img src="/IMG/Navbar_menufechado/calendario_icon02 2.png" alt="calendario_icon02" /></a></li>
+      <li><a href="#"><img src="/IMG/Navbar_menufechado/loja.png" alt="Loja" /></a></li>
+      <li><a class="teste" href="#" style="height: 19px; width: 56px; ; display: grid; place-items: center; overflow: hidden;"><img src="/IMG/Navbar_menufechado/mais1.png" alt="Mais" /></a></li>
+      <li><a href="#"><img src="/IMG/Navbar_menufechado/idioma1.png" alt="Idioma" /></a></li>
+      <li><a href="#"><img src="/IMG/Navbar_menufechado/sair1.png" alt="Sair" onclick="showMenu()" /></a></li>
+    </ul>
+  </div>
+
+  <div class="menu-sair" id="menu-sair">
+    <button class="expand-btn" id="expand-btn" onclick="toggleExpandMenu()">
+      <img id="expand-icon" src="./IMG/Sinais/Rectangle 12.png" alt="Expandir Menu">
+    </button>
+    <button class="close-btn" onclick="hideMenu()">X</button>
+
+    <h2>Olá, RIBEIRO</h2>
+    <div class="Navbar-default">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#">
+              <img src="./IMG/navbar/Frame 6.png" alt="Ícone 1" class="navbar-icon">
+            </a>
+            <span class="navbar-text"></span>
+          </li>
+          <li class="navbar-item">
+            <a href="#">
+              <img src="./IMG/navbar/Frame 7.png" alt="Ícone 2" class="navbar-icon">
+            </a>
+            <span class="navbar-text"></span>
+          </li>
+          <li class="navbar-item">
+            <a href="#">
+              <img src="./IMG/navbar/Frame 8.png" alt="Ícone 3" class="navbar-icon">
+            </a>
+            <span class="navbar-text"></span>
+          </li>
+          <li class="navbar-item">
+            <a href="#">
+              <img src="./IMG/navbar/Frame 9.png" alt="Ícone 4" class="navbar-icon">
+            </a>
+            <span class="navbar-text"></span>
+          </li>
+          <li class="navbar-item navbar-arrow">
+            <a href="#">
+              <img src="./IMG/navbar/Group 63.png" alt="Seta Direita">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="navbar3">
+      <div class="slides-container">
+        <ul class="slides">
+          <span class="seta-item" onclick="voltar()">&#60;</span>
+          <li><a href="#"><img src="./IMG/Sub-Menu/Geral (1).png" alt="img1" /></a></li>
+          <li><a href="#"><img src="./IMG/Sub-Menu/Indicadores.png" alt="img2" /></a></li>
+          <li><a href="#"><img src="./IMG/Sub-Menu/Novidades.png" alt="img3" /></a></li>
+          <li><a href="#"><img src="./IMG/Sub-Menu/Atalhos.png" alt="img4" /></a></li>
+          <li><a href="#"><img src="./IMG/Sub-Menu/Calendário.png" alt="img5" /></a></li>
+          <span class="seta2-item" onclick="avancar()"> &#62;</span>
+        </ul>
+      </div>
+    </div>
+    <div class="image-group">
+      <img src="./IMG/Menu/Group 253.png" alt="Image 1">
+      <div class="footer-rectangle">
+        <footer class="footer">
+          <span class="footer-item" onclick="voltar()">&#60; Voltar</span>
+          <span class="footer-item" onclick="pesquisar()">🔍 Pesquisar</span>
+          <span class="footer-item" onclick="avancar()">Avançar &#62;</span>
+        </footer>
+        <div id="search-modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Pesquisar</h2>
+            <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
+            <button onclick="executeSearch()">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="./JS/Main.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>
